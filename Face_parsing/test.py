@@ -40,7 +40,7 @@ def vis_parsing_maps(im, parsing_anno, stride, save_im=False, save_path='vis_res
         print(save_path)
         cv2.imwrite(save_path +'.png', vis_parsing_anno)
 
-def parsing(respth='./data/label', dspth='./data', cp='79999_iter.pth'):
+def parsing(respth='/content/data/custom/output', dspth='/content/data/custom/input', cp='79999_iter.pth'):
 
     if not os.path.exists(respth):
         os.makedirs(respth)
@@ -48,7 +48,7 @@ def parsing(respth='./data/label', dspth='./data', cp='79999_iter.pth'):
     n_classes = 19
     net = BiSeNet(n_classes=n_classes)
     net.cuda()
-    save_pth = osp.join('./pretrained_network/parsing', cp)
+    save_pth = osp.join('/content/checkpoint/SEAN', cp)
     net.load_state_dict(torch.load(save_pth))
     net.eval()
 

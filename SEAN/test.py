@@ -25,8 +25,8 @@ def reconstruct(mode):
     if mode == 'dyeing':
         opt.styling_mode = mode # dyeing
 
-        opt.image_dir = './data/dyeing'
-        opt.label_dir = './results/label/others'
+        opt.image_dir = '/content/data/custom/input'
+        opt.label_dir = '/content/data/custom/output'
 
     else: # styling_ref / styling_rand
         opt.styling_mode = 'styling'

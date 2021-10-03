@@ -12,8 +12,8 @@ def main(args):
 
     if args.mode == 'dyeing':
         # Parsing > SEAN
-        parsing(respth='./results/label/src' ,dspth='./data/src/src') # parsing src_image
-        parsing(respth='./results/label/others', dspth='./data/dyeing') # parsing ref_image
+        parsing(respth='/content/data/custom/output' ,dspth='/content/data/custom/input') # parsing src_image
+        parsing(respth='/content/data/ref/output', dspth='/content/data/ref/male') # parsing ref_image
         reconstruct(args.mode)
         
     elif args.mode == 'styling_ref':
